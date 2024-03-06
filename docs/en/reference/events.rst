@@ -580,7 +580,7 @@ preUpdate
 PreUpdate is called inside the ``EntityManager::flush()`` method,
 right before an SQL ``UPDATE`` statement. This event is not
 triggered when the computed changeset is empty, nor for a DQL
-   ``UPDATE`` statement.
+``UPDATE`` statement.
 
 Changes to associations of the updated entity are never allowed in
 this event, since Doctrine cannot guarantee to correctly handle

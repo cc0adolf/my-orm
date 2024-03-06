@@ -121,7 +121,7 @@ argument specifies the :ref:`Doctrine Mapping Type
 <reference-mapping-types>` to use for the field. If the type is not
 specified, ``string`` is used as the default.
 
-.. configuration-block::
+Using ATTRIBUTE
 
     .. code-block:: attribute
 
@@ -140,6 +140,8 @@ specified, ``string`` is used as the default.
             private $postedAt;
         }
 
+Using XML
+
     .. code-block:: xml
 
         <doctrine-mapping>
@@ -157,7 +159,7 @@ assumes the field name is also the column name. So in this example:
 * the ``text`` property will map to the column ``text`` with the default mapping type ``string``;
 * the ``postedAt`` property will map to the ``posted_at`` column with the ``datetime`` type.
 
-Here is a complete list of ``Column``s attributes (all optional):
+Here is a complete list of ``Column``\s attributes (all optional):
 
 - ``type`` (default: 'string'): The mapping type to use for the column.
 - ``name`` (default: name of property): The name of the column in the database.
@@ -298,7 +300,7 @@ Identifiers / Primary Keys
 Every entity class must have an identifier/primary key. You can select
 the field that serves as the identifier with the ``#[Id]`` attribute.
 
-.. configuration-block::
+Using ATTRIBUTE
 
     .. code-block:: attribute
 
@@ -311,6 +313,8 @@ the field that serves as the identifier with the ``#[Id]`` attribute.
             private int|null $id = null;
             // ...
         }
+
+Using XML
 
     .. code-block:: xml
 
@@ -348,7 +352,7 @@ strategy, by configuring what it defaults to.
 .. _identifier-generation-strategies:
 
 Identifier Generation Strategies
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+________________________________
 
 The previous example showed how to use the default identifier
 generation strategy without knowing the underlying database with
@@ -380,7 +384,7 @@ Here is the list of possible generation strategies:
    It will allow you to pass a :ref:`class of your own to generate the identifiers. <attrref_customidgenerator>`
 
 Sequence Generator
-^^^^^^^^^^^^^^^^^^
+__________________
 
 The Sequence Generator can currently be used in conjunction with
 Oracle or Postgres and allows some additional configuration options
@@ -443,7 +447,7 @@ need to access the sequence once to generate the identifiers for
 
 
 Composite Keys
-~~~~~~~~~~~~~~
+______________
 
 With Doctrine ORM you can use composite primary keys, using ``#[Id]`` on
 more than one column. Some restrictions exist opposed to using a single

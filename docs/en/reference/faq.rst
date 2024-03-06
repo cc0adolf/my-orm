@@ -130,7 +130,7 @@ Inheritance
 -----------
 
 Can I use Inheritance with Doctrine ORM?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Yes, you can use Single- or Joined-Table Inheritance in ORM.
 

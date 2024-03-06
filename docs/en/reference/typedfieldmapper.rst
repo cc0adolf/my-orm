@@ -32,7 +32,7 @@ PHP type => DBAL type mappings into its constructor to override the default beha
 Then, an entity using the ``CustomIdObject`` typed field will be correctly assigned its DBAL type
 (``CustomIdObjectType``) without the need of explicit declaration.
 
-.. configuration-block::
+Using ATTRIBUTE
 
     .. code-block:: attribute
 
@@ -47,6 +47,8 @@ Then, an entity using the ``CustomIdObject`` typed field will be correctly assig
             // ...
         }
 
+Using XML
+
     .. code-block:: xml
 
         <doctrine-mapping>
@@ -55,6 +57,8 @@ Then, an entity using the ``CustomIdObject`` typed field will be correctly assig
             <!-- -->
           </entity>
         </doctrine-mapping>
+
+Using YAML
 
     .. code-block:: yaml
 
@@ -82,7 +86,7 @@ It is perfectly valid to override even the "automatic" mapping rules mentioned a
 
 
 TypedFieldMapper interface
--------------------------
+--------------------------
 The interface ``Doctrine\ORM\Mapping\TypedFieldMapper`` allows you to implement your own
 typed field mapping logic. It consists of just one function
 

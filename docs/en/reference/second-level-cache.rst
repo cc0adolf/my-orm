@@ -78,7 +78,8 @@ Cache Regions
 -------------
 
 ``Doctrine\ORM\Cache\Region\DefaultRegion`` is the default implementation.
- A simplest cache region compatible with all doctrine-cache drivers but does not support locking.
+A simplest cache region compatible with all doctrine-cache drivers but does not support locking.
+
 ``Doctrine\ORM\Cache\Region`` and ``Doctrine\ORM\Cache\ConcurrentRegion``
 define contracts that should be implemented by a cache provider.
 
@@ -269,13 +270,13 @@ Entity cache definition
 * Entity cache configuration allows you to define the caching strategy and region for an entity.
 
   * ``usage`` specifies the caching strategy: ``READ_ONLY``,
-``NONSTRICT_READ_WRITE``, ``READ_WRITE``.
-See :ref:`reference-second-level-cache-mode`.
+    ``NONSTRICT_READ_WRITE``, ``READ_WRITE``.
+    See :ref:`reference-second-level-cache-mode`.
   * ``region`` is an optional value that specifies the name of the second
 level cache region.
 
 
-.. configuration-block::
+Using ATTRIBUTE
 
     .. code-block:: attribute
 
@@ -294,6 +295,8 @@ level cache region.
 
             // other properties and methods
         }
+
+Using XML
 
     .. code-block:: xml
 
@@ -317,7 +320,7 @@ The most common use case is to cache entities. But we can also cache relationshi
 It caches the primary keys of association and cache each element will be cached into its region.
 
 
-.. configuration-block::
+Using ATTRIBUTE
 
     .. code-block:: attribute
 
@@ -346,6 +349,8 @@ It caches the primary keys of association and cache each element will be cached 
 
             // other properties and methods
         }
+
+Using XML
 
     .. code-block:: xml
 

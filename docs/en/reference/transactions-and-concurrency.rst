@@ -187,7 +187,7 @@ has been modified by someone else already.
 You designate a version field in an entity as follows. In this
 example we'll use an integer.
 
-.. configuration-block::
+Using ATTRIBUTE
 
     .. code-block:: attribute
 
@@ -200,6 +200,8 @@ example we'll use an integer.
             // ...
         }
 
+Using XML
+
     .. code-block:: xml
 
         <doctrine-mapping>
@@ -211,7 +213,7 @@ example we'll use an integer.
 Alternatively a datetime type can be used (which maps to a SQL
 timestamp or datetime):
 
-.. configuration-block::
+Using ATTRIBUTE
 
     .. code-block:: attribute
 
@@ -223,6 +225,8 @@ timestamp or datetime):
             private DateTime $version;
             // ...
         }
+
+Using XML
 
     .. code-block:: xml
 

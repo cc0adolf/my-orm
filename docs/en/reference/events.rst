@@ -737,7 +737,7 @@ An entity listener is a lifecycle listener class used for an entity.
 - The entity listener's mapping may be applied to an entity class or mapped superclass.
 - An entity listener is defined by mapping the entity class with the corresponding mapping.
 
-.. configuration-block::
+Using attribute
 
     .. code-block:: attribute
 
@@ -751,6 +751,9 @@ An entity listener is a lifecycle listener class used for an entity.
         {
             // ....
         }
+
+Using XML
+
     .. code-block:: xml
 
         <doctrine-mapping>
@@ -792,7 +795,7 @@ An ``Entity Listener`` could be any class, by default it should be a class with 
 To define a specific event listener method (one that does not follow the naming convention)
 you need to map the listener method using the event type mapping:
 
-.. configuration-block::
+Using ATTRIBUTE
 
     .. code-block:: attribute
 
@@ -832,6 +835,8 @@ you need to map the listener method using the event type mapping:
             #[PostLoad]
             public function postLoadHandler(User $user, PostLoadEventArgs $event): void { // ... }
         }
+
+Using XML
 
     .. code-block:: xml
 

@@ -186,7 +186,7 @@ mapped to a single database table.
 
 Example:
 
-.. configuration-block::
+Using Attribute
 
     .. code-block:: attribute
 
@@ -309,13 +309,13 @@ perform just about any query which can have a negative impact on
 performance, especially with large tables and/or large hierarchies.
 When partial objects are allowed, either globally or on the
 specific query, then querying for any type will not cause the
-tables of subtypes to be ``OUTER JOIN``ed which can increase
+tables of subtypes to be ``OUTER JOIN``\ed which can increase
 performance but the resulting partial objects will not fully load
 themselves on access of any subtype fields, so accessing fields of
 subtypes after such a query is not safe.
 
 There is also another important performance consideration that it is *not possible*
-to query for the base entity without any ``LEFT JOIN``s to the sub-types.
+to query for the base entity without any ``LEFT JOIN``\s to the sub-types.
 
 SQL Schema considerations
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -354,7 +354,7 @@ to override a relationship mapping defined by the mapped superclass.
 
 Example:
 
-.. configuration-block::
+Using ATTRIBUTE
 
     .. code-block:: attribute
 
@@ -400,6 +400,8 @@ Example:
         class Admin extends User
         {
         }
+
+Using xml
 
     .. code-block:: xml
 
@@ -449,8 +451,7 @@ Example:
 
 Things to note:
 
--  The "association override" specifies the overrides based on the property
- name.
+-  The "association override" specifies the overrides based on the property name.
 -  This feature is available for all kind of associations (OneToOne, OneToMany, ManyToOne, ManyToMany).
 -  The association type *cannot* be changed.
 -  The override could redefine the ``joinTables`` or ``joinColumns`` depending on the association type.
@@ -458,12 +459,12 @@ Things to note:
 -  The override could redefine fetch to modify the fetch strategy of the extended entity.
 
 Attribute Override
-~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~
 Override the mapping of a field.
 
 Could be used by an entity that extends a mapped superclass to override a field mapping defined by the mapped superclass.
 
-.. configuration-block::
+Using ATTRIBUTE
 
     .. code-block:: attribute
 
@@ -508,6 +509,8 @@ Could be used by an entity that extends a mapped superclass to override a field 
         class Guest extends User
         {
         }
+
+Using xml
 
     .. code-block:: xml
 

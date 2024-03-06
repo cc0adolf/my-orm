@@ -129,11 +129,10 @@ Registering Event Handlers
 There are two ways to set up an event handler:
 
 * For *all events* you can create a Lifecycle Event Listener or Subscriber class and register
-it by calling ``$eventManager->addEventListener()`` or ``eventManager->addEventSubscriber()``,
-see
-:ref:`Listening and subscribing to Lifecycle Events <listening-and-subscribing-to-lifecycle-events>`
+  it by calling ``$eventManager->addEventListener()`` or ``eventManager->addEventSubscriber()``,
+  see :ref:`Listening and subscribing to Lifecycle Events <listening-and-subscribing-to-lifecycle-events>`
 * For *some events* (see table below), you can create a *Lifecycle Callback* method in the
-entity, see :ref:`Lifecycle Callbacks <lifecycle-callbacks>`.
+  entity, see :ref:`Lifecycle Callbacks <lifecycle-callbacks>`.
 
 .. _reference-events-lifecycle-events:
 
@@ -221,7 +220,7 @@ specific to a particular entity class's lifecycle.
 
     Lifecycle Callbacks are not supported for :doc:`Embeddables </tutorials/embeddables>`.
 
-.. configuration-block::
+Using ATTRIBURES
 
     .. code-block:: attribute
 
@@ -260,6 +259,9 @@ specific to a particular entity class's lifecycle.
                 $this->value = 'changed from preUpdate callback!';
             }
         }
+
+Using XML
+
     .. code-block:: xml
 
         <?xml version="1.0" encoding="UTF-8"?>
